@@ -459,7 +459,7 @@ def grupsaya():
 		gud = json.loads(uh.text)
 		for p in gud['data']:
 			nama = p["name"]
-			   id= p["id"]
+			id = p["id"]
 			f=open('out/Grupid.txt','w')
 			listgrup.append(id)
 			f.write(id + '\n')
