@@ -310,7 +310,7 @@ def pilih_super():
 	for o in titik:
 		print("\r\033[1;96m[\033[1;97m✸\033[1;96m] \033[1;93mCrack \033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 	print
-	print('\x1b[1;96m[!] \x1b[1;93mStop CTRL+z')
+	print('\x1b[1;96m[!] \x1b[1;93mTo Stop process press CTRL+z')
 	print 42*"\033[1;96m="
 	
 			
