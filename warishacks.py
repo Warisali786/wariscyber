@@ -77,13 +77,14 @@ vuln = "\033[32mVuln"
 
 os.system("clear")
 print "\033[1;96m ============================================================="
-print  """\033[1;96m [¤] \x1b[1;93mASSALAMUALAIKUM\x1b[1;96m  \033[1;96m   [¤] \x1b[1;93mWHATSAPP : 085691015635\x1b[1;96m  
-\033[1;96m [¤] \x1b[1;93mSELAMAT DATAMG\x1b[1;96m      [¤] \x1b[1;93mFACEBOOK : tools termux\x1b[1;96m  
-\033[1;96m [¤] \x1b[1;93mTOOLS MR.BLACK0304\x1b[1;96m  [¤] \x1b[1;93mYOUTUBE  : mr black0304\x1b[1;96m"""
+print  """\033[1;96m [¤] \x1b[1;93mAsslam-o-Alikum\x1b[1;96m  \033[1;96m   [¤] \x1b[1;93mWHATSAPP : +1(281)241-7200\x1b[1;96m  
+\033[1;96m [¤] \x1b[1;93mWaris Hacks\x1b[1;96m         [¤] \x1b[1;93mFACEBOOK : GazarDevelopers\x1b[1;96m  
+\033[1;96m [¤] \x1b[1;93mTool-warishacks   \x1b[1;96m  [¤] \x1b[1;93mTALK  : PRIVATE-hacks\x1b[1;96m"""
 print " \x1b[1;93m============================================================="
-
-CorrectUsername = "FATONICYBER"
-CorrectPassword = "MR.BLACK0304"
+print"This Tool is professionaly created by [ waris ali ] after debuging a lot of error"
+print"if you do not have  login details please contact with gazar developers.Thanks"
+CorrectUsername = "warishacks786"
+CorrectPassword = "hahahahaha"
 
 loop = 'true'
 while (loop == 'true'):
