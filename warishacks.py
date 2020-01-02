@@ -229,10 +229,10 @@ def super():
 	os.system('clear')
 	print logo
 	print 42*"\033[1;96m="
-	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Clone targeted member friend  list"
-	print "\x1b[1;96m[\x1b[1;92m2\x1b[1;96m]\x1b[1;93m Clone my friend list accounts"
-	print "\x1b[1;96m[\x1b[1;92m3\x1b[1;96m]\x1b[1;93m Clone groups members accounts"
-	print "\x1b[1;96m[\x1b[1;92m4\x1b[1;96m]\x1b[1;93m Clone Idz that in file"
+	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Crack targeted member friend  list"
+	print "\x1b[1;96m[\x1b[1;92m2\x1b[1;96m]\x1b[1;93m Crack my own friends list accounts"
+	print "\x1b[1;96m[\x1b[1;92m3\x1b[1;96m]\x1b[1;93m crack groups members accounts"
+	print "\x1b[1;96m[\x1b[1;92m4\x1b[1;96m]\x1b[1;93m crack Idz that in file"
 	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m BAck"
 	pilih_super()
 
@@ -502,16 +502,16 @@ def yahoo():
 	print logo
 	print 42*"\033[1;96m="
 	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Clone from targeted friends list"
-	print "\x1b[1;96m[\x1b[1;92m2\x1b[1;96m]\x1b[1;93m Clone  my friends list"
+	print "\x1b[1;96m[\x1b[1;92m2\x1b[1;96m]\x1b[1;93m Clone my friends list"
 	print "\x1b[1;96m[\x1b[1;92m3\x1b[1;96m]\x1b[1;93m Clone group member accounts"
-	print "\x1b[1;96m[\x1b[1;92m4\x1b[1;96m]\x1b[1;93m Clone accounts from target accounts  file"
+	print "\x1b[1;96m[\x1b[1;92m4\x1b[1;96m]\x1b[1;93m Clone target accounts  file"
 	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Kembali"
 	clone()
        
 def clone():
 	embuh = raw_input("\n\x1b[1;97m >>> ")
 	if embuh =="":
-		print "\033[1;96m[!] \x1b[1;91mIsi yang benar"
+		print "\033[1;96m[!] \x1b[1;91mFill in correctly"
 	elif embuh =="1":
 		clone_dari_daftar_teman()
 	elif embuh =="2":
@@ -523,7 +523,7 @@ def clone():
 	elif embuh =="0":
 		menu()
 	else:
-		print "\033[1;96m[!] \x1b[1;91mIsi yang benar"
+		print "\033[1;96m[!] \x1b[1;91mFill it Correctly"
 		
 
 def clone_dari_daftar_teman():
@@ -614,7 +614,7 @@ def clone_dari_teman():
 		op = json.loads(jok.text)
 		print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mNama\033[1;91m :\033[1;97m "+op["name"]
 	except KeyError:
-		print"\033[1;96m[!] \x1b[1;91mTeman tidak ditemukan"
+		print"\033[1;96m[!] \x1b[1;91mFriends not found"
 		raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
 		menu()
 	jalan('\033[1;96m[✺] \033[1;93mMengambil email \033[1;97m...')
@@ -683,7 +683,7 @@ def clone_dari_member_group():
 	try:
 		r=requests.get('https://graph.facebook.com/group/?id='+id+'&access_token='+toket)
 		asw=json.loads(r.text)
-		print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mNama group \033[1;91m:\033[1;97m "+asw['name']
+		print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mGroup Name \033[1;91m:\033[1;97m "+asw['name']
 	except KeyError:
 		print"\033[1;96m[!] \x1b[1;91mGroup tidak ditemukan"
 		raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
