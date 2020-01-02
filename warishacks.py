@@ -148,7 +148,7 @@ def login():
 				print"\n\033[1;96m[!] \x1b[1;91mYour account is not responding perfectly..."
 				keluar()
 		if 'checkpoint' in url:
-			print("\n\033[1;96m[!] \x1b[1;91mIt looks like your account has been disabled...")
+			print("\n\033[1;96m[!] \x1b[1;91mIt looks like your account has an error disabled...")
 			os.system('rm -rf login.txt')
 			time.sleep(1)
 			keluar()
@@ -176,23 +176,23 @@ def menu():
 		id = a['id']
 	except KeyError:
 		os.system('clear')
-		print"\033[1;96m[!] \033[1;91mSepertinya akun anda kena checkpoint"
+		print"\033[1;96m[!] \033[1;91mIt looks like your account has an error disabled..."
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
 	except requests.exceptions.ConnectionError:
-		print"\033[1;96m[!] \x1b[1;91mTidak ada koneksi"
+		print"\033[1;96m[!] \x1b[1;91mYour account is not responding perfectly..."
 		keluar()
 	os.system("clear")
 	print logo
 	print 42*"\033[1;96m="
-	print "\033[1;96m[\033[1;97m✓\033[1;96m]\033[1;93m Nama \033[1;91m: \033[1;92m"+nama+"\033[1;97m               "
+	print "\033[1;96m[\033[1;97m✓\033[1;96m]\033[1;93m Name \033[1;91m: \033[1;92m"+nama+"\033[1;97m               "
 	print "\033[1;96m[\033[1;97m✓\033[1;96m]\033[1;93m ID   \033[1;91m: \033[1;92m"+id+"\x1b[1;97m              "
 	print 42*"\033[1;96m="
 	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Hack Fb MBF"
 	print "\x1b[1;96m[\x1b[1;92m2\x1b[1;96m]\x1b[1;93m Lihat daftar grup               "
 	print "\x1b[1;96m[\x1b[1;92m4\x1b[1;96m]\x1b[1;93m Yahoo clone               "
-	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Keluar            "
+	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Exit            "
 	pilih()
 
 
