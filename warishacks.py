@@ -54,11 +54,11 @@ logo = """\033[1;93m█████████
 \033[1;93m█\033[1;92m▲▲▲▲▲\033[1;92m--  - _ --\033[1;96m═╩╝┴ ┴┴└─┴ ┴   ╚  ╚═╝ \033[1;96  GazarDevelopers
 \033[1;93m█████████      \033[1;92m«----------✧----------»
 \033[1;93m ██ ██
-\033[1;93m╔════════════════════════════════════════════╗
-\033[1;93m║\033[1;96m* \033[1;93mSupporter  \033[1;93m : \033[1;93mGazarDevelopers\033[1;93m          ║
-\033[1;93m║\033[1;96m* \033[1;93mAuthor     \033[1;93m : \033[1;93m\033[4mhttps://www.facebook.com/gazardevelopers\033[0m \033[1;93m║
-\033[1;93m║\033[1;96m* \033[1;93mWhatsApp   \033[1;93m: \033[1;93m+1(281)241-7200\033[1;93m                 ║
-\033[1;93m╚════════════════════════════════════════════╝"""
+\033[1;93m╔════════════════════════════════════════════════════╗
+\033[1;93m║\033[1;96m* \033[1;93mSupporter  \033[1;93m : \033[1;93mGazarDevelopers\033[1;93m          
+\033[1;93m║\033[1;96m* \033[1;93mAuthor     \033[1;93m : \033[1;93m\033[4mhttps://www.facebook.com/gazardevelopers\033[0m \033[1;93m
+\033[1;93m║\033[1;96m*  \033[1;93mWhatsApp   \033[1;93m: \033[1;93m+1(281)241-7200\033[1;93m                 
+\033[1;93m╚════════════════════════════════════════════════════╝"""
 
 def tik():
 	titik = ['.   ','..  ','... ']
@@ -81,25 +81,26 @@ print  """\033[1;96m [¤] \x1b[1;93mAsslam-o-Alikum\x1b[1;96m  \033[1;96m   [¤]
 \033[1;96m [¤] \x1b[1;93mWaris Hacks\x1b[1;96m         [¤] \x1b[1;93mFACEBOOK : GazarDevelopers\x1b[1;96m  
 \033[1;96m [¤] \x1b[1;93mTool-warishacks   \x1b[1;96m  [¤] \x1b[1;93mTALK  : PRIVATE-hacks\x1b[1;96m"""
 print " \x1b[1;93m============================================================="
-print"This Tool is professionaly created by [ waris ali ] after debuging a lot of error"
+print"This Tool is Professionaly created by waris ali "
 print"if you do not have  login details please contact with gazar developers.Thanks"
+print""
 CorrectUsername = "warishacks786"
 CorrectPassword = "hahahahaha"
 
 loop = 'true'
 while (loop == 'true'):
-    username = raw_input("\033[1;96m[☆] \x1b[1;93mUSERNAME TOOLS INI \x1b[1;96m>>>> ")
+    username = raw_input("\033[1;96m[☆] \x1b[1;93mEnter Tool Username \x1b[1;96m:: ")
     if (username == CorrectUsername):
-    	password = raw_input("\033[1;96m[☆] \x1b[1;93mPASSWORD TOOLS INI \x1b[1;96m>>>> ")
+    	password = raw_input("\033[1;96m[☆] \x1b[1;93mEnter Tool Password \x1b[1;96m:: ")
         if (password == CorrectPassword):
-            print "Logged in successfully as " + username
+            print "Weldone Log in successfully " + username
             loop = 'false'
         else:
-            print "yang bener dong"
-            os.system('xdg-open https://wa.me/6285691015635')
+            print "Please Enter correct details"
+            os.system('xdg-open https://www.facebook.com/gazardevelopers')
     else:
-        print "salah sayang!"
-        os.system('xdg-open https://wa.me/6285691015635')
+        print "The username or password is incorrect..!"
+        os.system('xdg-open https://www.facebook.com/gazardevelopers')
 
 def login():
 	os.system('clear')
@@ -110,14 +111,14 @@ def login():
 		os.system('clear')
 		print logo
 		print 42*"\033[1;96m="
-		print('\033[1;96m[☆] \x1b[1;93mLOGIN AKUN FACEBOOK ANDA \x1b[1;96m[☆]' )
-		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email \x1b[1;91m: \x1b[1;92m')
-		pwd = raw_input('\033[1;96m[+] \x1b[1;93mPassword \x1b[1;91m: \x1b[1;92m')
+		print('\033[1;96m[☆] \x1b[1;93mPlease login to your account\x1b[1;96m[☆]' )
+		id = raw_input('\033[1;96m[+] \x1b[1;93mEnter ID/Email \x1b[1;91m: \x1b[1;92m')
+		pwd = raw_input('\033[1;96m[+] \x1b[1;93mEnter Password \x1b[1;91m: \x1b[1;92m')
 		tik()
 		try:
 			br.open('https://m.facebook.com')
 		except mechanize.URLError:
-			print"\n\033[1;96m[!] \x1b[1;91mTidak ada koneksi"
+			print"\n\033[1;96m[!] \x1b[1;91mYpur account is not eligible for this purpose"
 			keluar()
 		br._factory.is_html = True
 		br.select_form(nr=0)
